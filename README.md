@@ -18,8 +18,8 @@
 
 - **HTML5** – estrutura semântica
 - **Tailwind CSS** – estilização rápida e responsiva
-- **JavaScript (ES6+)** – DOM manipulation, event handling
-- **localStorage** – opcionalmente salva as tarefas no navegador
+- **JavaScript (ES6+)** – DOM, eventos
+- **localStorage** – Salva as tarefas no navegador
 
 ---
 
