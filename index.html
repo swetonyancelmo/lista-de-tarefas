@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Lista de Tarefas</title>
+  </head>
+  <body class="bg-sky-100">
+    <main class="flex flex-col items-center justify-center space-y-3 mt-6 w-full max-w-xl mx-auto">
+      <h1 class="text-3xl font-bold text-cyan-700 mb-6">Lista de Tarefas</h1>
+
+      <form class="flex gap-3" id="todo-form">
+        <input
+          class="p-2.5 rounded-3xl border-2 border-sky-500/40 focus:border-sky-500 focus:outline-none font-semibold"
+          type="text"
+          placeholder="Informe a sua tarefa..."
+          id="task-title-input"
+        />
+        <button
+          class="font-medium text-white p-2.5 rounded-3xl bg-sky-500 hover:bg-sky-700 transition-all"
+          id="add-task-button"
+        >
+          Adicionar
+        </button>
+      </form>
+
+      <section>
+        <ul id="todo-list" class="space-y-3 mt-6 w-full max-w-xl mx-auto"></ul>
+      </section>
+    </main>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
