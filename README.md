@@ -7,7 +7,7 @@
 ## 🎯 Funcionalidades
 
 - ✅ Adicionar tarefas dinamicamente
-- ✍️ Editar e marcar tarefas como concluídas
+- ✍️ Marcar tarefas como concluídas
 - ❌ Remover tarefas individualmente
 - 💾 Persistência via `localStorage` (opcional)
 - 📱 Responsivo e estiloso com Tailwind
