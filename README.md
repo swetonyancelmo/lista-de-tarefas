@@ -1,12 +1,50 @@
-# React + Vite
+# Lista de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido para o aprendizado da tecnologia React. Nele, você pode explorar conceitos fundamentais, como Hooks, Componentes, manipulação de eventos e também como persistir dados utilizando o LocalStorage.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca JavaScript para criação de interfaces de usuário.
+- **Vite**: Ferramenta de build que oferece um desenvolvimento ágil com suporte a módulos ES.
+- **LocalStorage**: API do navegador utilizada para persistir as tarefas mesmo após o recarregamento da página.
+- **ESLint**: Ferramenta para análise e padronização do código.
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **`src/App.jsx`**: Renderiza o componente principal `TodoList`.
+- **`src/components/TodoList/TodoList.jsx`**: Componente que gerencia as tarefas, utilizando Hooks como `useState` e `useEffect` para lidar com o estado e persistir dados com o LocalStorage.
+- **`src/components/TodoList/TodoList.css`**: Define os estilos do componente `TodoList`.
+- **`vite.config.js`**: Configuração do Vite com o plugin `@vitejs/plugin-react`.
+
+## Funcionalidades
+
+- **Adicionar Tarefas**: Adicione novas tarefas através do formulário.
+- **Marcar Como Concluída**: Clique na tarefa para alternar seu status de concluída.
+- **Deletar Tarefa**: Remova tarefas individuais utilizando o botão "Deletar".
+- **Deletar Todas as Tarefas**: Apague todas as tarefas com o botão "Deletar Todas".
+- **Persistência com LocalStorage**: As tarefas são salvas no LocalStorage, garantindo que os dados permaneçam mesmo após atualizar a página.
+
+## Como Executar o Projeto
+
+1. **Instale as dependências**:
+   ```sh
+   npm install
+
+2. **Inicie o servidor de desenvolvimento**:
+  ```sh
+  npm run dev
+  ```
+
+3. Acesse o endereço informado no terminal (normalmente http://localhost:3000).
+
+
+## Aprendizado
+
+Este projeto foi ideal para estar iniciando em React e aprender sobre:
+
+- Componentes funcionais.
+- Uso de Hooks como useState e useEffect.
+- Persistência de dados com LocalStorage.
+- Organização e estruturação de um projeto moderno com Vite.
+
+Projeto realizado por [Swetony Ancelmo](https://github.com/swetonyancelmo)
