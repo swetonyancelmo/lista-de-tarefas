@@ -1,22 +1,47 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import TodoListImage from '../../assets/todolist.png'
 import './TodoList.css';
 
 export default function TodoList() {
 
-  const [list, setList] = useState([]);
+  const listaStorage = localStorage.getItem('Lista');
+
+  const [list, setList] = useState(listaStorage ? JSON.parse(listaStorage) : []);
   const [newItem, setNewItem] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem('Lista', JSON.stringify(list));
+  }, [list]);
 
   // Adiciona a nova tarefa à lista
   function addItem(form){
     form.preventDefault();
 
     if(!newItem){
-      return;
+      return
     }
-
-    setList([...list, { text: newItem, isCompleted: false }]);
-    setNewItem("");
+    setList([...list, { text: newItem, isCompleted: false }])
+    setNewItem("")
     document.getElementById('input').focus();
+  }
+
+  // Marca uma tarefa como concluida
+  function clicou(index){
+    const listaAuxiliar = [...list];
+    listaAuxiliar[index].isCompleted = !listaAuxiliar[index].isCompleted;
+    setList(listaAuxiliar);
+  }
+
+  // Deleta uma tarefa
+  function deletar(index){
+    const listaAuxiliar = [...list];
+    listaAuxiliar.splice(index, 1);
+    setList(listaAuxiliar);
+  }
+
+  // Deleta todas as tarefas
+  function deletarTudo(){
+    setList([]);
   }
 
   return(
@@ -27,7 +52,7 @@ export default function TodoList() {
         <input
           id='input'
           value={newItem}
-          onChange={(e) => { setNewItem(e.target.value) }}
+          onChange={(e) => { setNewItem( e.target.value ) }}
           className='input-contain'
           type="text"
           placeholder='Digite uma tarefa'
@@ -36,16 +61,26 @@ export default function TodoList() {
       </form>
 
       <div className='tasks-contain'>
-        <div className='task'>
-          <span>Tarefa Teste</span>
-          <button className='btn-delete'>Deletar</button>
+        <div style={{ textAlign: 'center' }}>
+          {
+            list.length < 1
+              ?
+              <img src={TodoListImage} />
+              :
+              list.map((item, index) => (
+                <div
+                  key={index} 
+                  className={ item.isCompleted ? "task is-completed" : 'task' }>
+                  <span onClick={() => {clicou(index)}}>{item.text}</span>
+                  <button onClick={() => {deletar(index)}} className='btn-delete'>Deletar</button>
+                </div>
+              ))
+          }
         </div>
-        <div className='task is-completed'>
-          <span>Tarefa Marcada</span>
-          <button className='btn-delete'>Deletar</button>
-        </div>
-
-        <button className='btn-delete-all'>Deletar Todas</button>
+        {
+          list.length > 0 &&
+          <button onClick={() => {deletarTudo()}} className='btn-delete-all'>Deletar Todas</button>
+        }
       </div>
 
     </div>
