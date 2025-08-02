@@ -65,7 +65,7 @@ export default function TodoList() {
           {
             list.length < 1
               ?
-              <img src={TodoListImage} />
+              <img className='image' src={TodoListImage} />
               :
               list.map((item, index) => (
                 <div

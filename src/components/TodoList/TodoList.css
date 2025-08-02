@@ -148,4 +148,8 @@ h1 {
   .tasks-contain {
     width: 100%;
   }
+
+  .image {
+    width: 200px;
+  }
 }
