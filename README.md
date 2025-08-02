@@ -2,6 +2,8 @@
 
 Este projeto foi desenvolvido para o aprendizado da tecnologia React. Nele, você pode explorar conceitos fundamentais, como Hooks, Componentes, manipulação de eventos e também como persistir dados utilizando o LocalStorage.
 
+![Imagem do projeto](./src/assets/imagem.png)
+
 ## Tecnologias Utilizadas
 
 - **React**: Biblioteca JavaScript para criação de interfaces de usuário.
