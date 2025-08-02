@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background-color: #222435;
+  font-family: 'Poppins', sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+  color: #7d83b9;
+}
+
+.form-contain {
+  display: flex;
+  width: 600px;
+  height: 60px;
+  margin: 30px auto;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.input-contain {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: #2d3046;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding-left: 18px;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 25px;
+  background-color: #363b65;
+  color: #fff;
+  height: 62px;
+  border: none;
+  border-radius: 0 16px 16px 0;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.btn-submit:hover {
+  font-weight: 500;
+  background-color: #363f88;
+}
+
+.tasks-contain {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  width: 600px;
+  margin: auto;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #363b65;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.task.is-completed {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1f2e;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.task:hover {
+  background-color: #151627;
+}
+
+.task span {
+  text-align: start;
+  width: 100%;
+  color: #fff;
+  margin-right: 10px;
+  padding: 10px 15px;
+}
+
+.task.is-completed span {
+  width: 100%;
+  color: #4d506e;
+  text-decoration: line-through;
+  margin-right: 10px;
+  padding: 10px 15px;
+}
+
+.btn-delete {
+  border: 1px solid #363b65;
+  border-radius: 0 10px 10px 0;
+  background: none;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.btn-delete:hover {
+  background: #ff004c;
+  color: #fff;
+  border: none;
+}
+
+.btn-delete-all {
+  border: 1px solid #ff004c;
+  border-radius: 10px;
+  background: none;
+  margin-top: 30px;
+  padding: 15px;
+  color: #ff004c;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .2s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-delete-all:hover {
+  background: #ff004c;
+  color: #fff;
+}
+
+@media screen and (max-width: 900px){
+  .form-contain {
+    width: 100%;
+  }
+
+  .tasks-contain {
+    width: 100%;
+  }
+}
